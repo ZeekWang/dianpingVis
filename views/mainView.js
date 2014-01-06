@@ -70,6 +70,9 @@ EquipmentsView = Backbone.View.extend({
                 .attr("height", r);
             d3.select(this).append("circle")
                 .attr("r", r)
+                 // .attr("fill", colorInterpolation(d.get("price")/200) )
+                 .attr("fill", "red")
+                 .attr("opacity", Math.sqrt(d.get("price")/200) * 0.5)
                 .attr("class", "node-circle");
             d3.select(this).append("text")
                 .attr("text-anchor", "middle")
@@ -81,7 +84,6 @@ EquipmentsView = Backbone.View.extend({
                 html:true,
                 fade:false,
                 title:function(){
-                    console.log(d.attributes);
                     return Mustache.render($("#t-store").html(), {store: d.attributes});
                 }
             });

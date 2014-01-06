@@ -1,6 +1,7 @@
 var stores = new StoreCollection();
 var mapView;
 var status = "";
+var colorInterpolation;
 
 function readData() {
     d3.csv("stores.csv", function(error, data) {
@@ -17,6 +18,7 @@ function readData() {
 
 function initData(){
     mapEvent = new MapEventModel({});
+    colorInterpolation = d3.interpolateRgb("white", "red");
 }
 
 
