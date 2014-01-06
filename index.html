@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>大众点评餐厅可视分析系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base target="_blank" />
+
+    <style>
+        .area-select-wrapper {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="toolbar-wrapper">
+        <div id="toolbar-left">
+            <span><b>大众点评餐厅可视分析系统</b></span>
+        </div>
+        <div id="toolbar-right">
+        </div>
+    </div>
+
+
+    <div id="view">
+        <div id="map-wrapper">
+            <div id="map-content"></div>
+            <div id="map-svg-wrapper">
+                <svg style="position:absolute; width:20000px; height:20000px"></svg>
+            </div>
+            <svg id="interaction-layer" style="position:absolute; width:20000px; height:20000px; z-index: 100000; cursor: crosshair;">
+            </svg>
+        </div>
+    </div>
+
+    <div id="datalist-wrapper">
+        <div id="over-view"></div>
+        <div id="detailed-view"></div>
+    </div>
+
+    <div id="tooltip">
+    </div>
+</body>
+
+<script type="text/mustache" id="t-store">
+    
+    <b>{{store.name}}：</b><br />
+    <ul>
+        <li>类型:{{store.type}}</li>
+        <li>地址:{{store.address}}</li>
+        <li>标签:{{store.label}}</li>
+    </ul>
+    </hr>
+</script>
+
+<script type="text/mustache" id="over-view-template">
+    <div>
+        <div class="title" title="{{name}}">{{name}}：</div>
+        <ul>
+        {{#domains}}
+            <li class="domain" domain={{domain}} units={{name}}><b>{{domain}}</b> {{count}}</li>
+        {{/domains}}
+        </ul>
+    </div>
+    <hr>
+</script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css" />
+<link rel="stylesheet" type="text/css" href="css/customDataTables.css" />
+
+<script type="text/javascript" src="lib/d3.js"></script>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/jquery.tipsy.js"></script>
+<script type="text/javascript" src="lib/mustache.js"></script>   
+<script type="text/javascript" src="lib/underscore.js"></script>
+<script type="text/javascript" src="lib/backbone.js"></script>
+<script type="text/javascript" src="lib/bmaputils.js"></script>
+<script type="text/javascript" src="lib/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="views/mapView.js"></script>
+<script type="text/javascript" src="views/dataView.js"></script>
+<script type="text/javascript" src="views/mainView.js"></script>
+<script type="text/javascript" src="models.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+<script type="text/javascript" src="dianping.js"></script>
+
+</html>

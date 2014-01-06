@@ -1,0 +1,48 @@
+.paging_full_numbers a.paginate_button,
+.paging_full_numbers a.paginate_active {
+	border: 1px solid #aaa;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 1px 2px;
+	margin: 0 1px;
+	cursor: pointer;
+	*cursor: hand;
+	color: #333 !important;
+}
+
+.dataTables_info {
+	float: right;
+}
+
+table.dataTable tr.even {
+	background-color: #FFF;
+}
+
+table.dataTable tr.odd {
+	background-color: #EEE;
+}
+
+table.dataTable tr.odd td.sorting_1 {
+	background-color: #EEE;
+}
+
+table.dataTable tr.even td.sorting_1 {
+	background-color: #FFF;
+}
+
+table.dataTable tr.row_selected {
+	background-color: #9FAFD1 !important;
+}
+
+table.dataTable tr.row_selected td.sorting_1 {
+	background-color: #9FAFD1 !important;
+}
+
+table.dataTable tr.row_hovered {
+	background-color: #8F9FC1 !important;
+}
+
+table.dataTable tr.row_hovered td.sorting_1 {
+	background-color: #8F9FC1 !important;
+}
