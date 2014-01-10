@@ -17,5 +17,13 @@ StoreCollection = Backbone.Collection.extend({
     model: StoreModel
 })
 
+SingleClusterModel = Backbone.Model.extend({
+})
+
+ClusterCollection = Backbone.Collection.extend({
+    model: SingleClusterModel
+})
+
 MapEventModel = Backbone.Model.extend({
+
 })

@@ -2,7 +2,7 @@ MapView = Backbone.View.extend({
     el: "#map-wrapper",
     initialize: function(){
         this.initData();
-        var dituScript = $("<script></script>").attr("src", "http://api.map.baidu.com/api?key=&v=1.3&callback=initializeMap");
+        var dituScript = $("<script></script>").attr("src", "http://api.map.baidu.com/api?key=&v=2.0&ak=&ak=tYBOwMCM3P13hceAdtVNDyvi&callback=initializeMap");
         $("body").append(dituScript);
         this.initializeMap();
     },
